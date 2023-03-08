@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>FrmMain</class>
+ <widget class="QWidget" name="FrmMain">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,14 +11,14 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
-    <width>639</width>
+    <width>640</width>
     <height>400</height>
    </size>
   </property>
@@ -28,47 +28,57 @@
     <height>400</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>나눔고딕</family>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>뉴스검색앱</string>
+   <string>네이버API뉴스검색앱</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>10</y>
-     <width>601</width>
-     <height>101</height>
+     <width>620</width>
+     <height>80</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="searchLayout">
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
        <string>뉴스 검색</string>
       </property>
-      <widget class="QSplitter" name="splitter">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
-         <x>50</x>
-         <y>40</y>
-         <width>491</width>
-         <height>23</height>
+         <x>20</x>
+         <y>24</y>
+         <width>581</width>
+         <height>41</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>검색어</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="textSearch"/>
-       <widget class="QPushButton" name="btnSearch">
-        <property name="text">
-         <string>검색</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>검색어 : </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txtSearch"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSearch">
+          <property name="text">
+           <string>검색</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -77,15 +87,15 @@
   <widget class="QWidget" name="verticalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>110</y>
-     <width>601</width>
-     <height>281</height>
+     <x>10</x>
+     <y>99</y>
+     <width>620</width>
+     <height>291</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="resultLayout">
     <item>
-     <widget class="QListView" name="lsvResults"/>
+     <widget class="QTableWidget" name="tblResult"/>
     </item>
    </layout>
   </widget>
