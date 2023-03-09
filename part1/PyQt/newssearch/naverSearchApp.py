@@ -11,8 +11,8 @@ from PyQt5.QtGui import *
 class qtApp(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi('part1/PyQt/NaversearchUI.ui',self)
-        self.setWindowIcon(QIcon('part1/PyQt/news.png'))
+        uic.loadUi('part1/PyQt/newssearch/NaversearchUI.ui',self)
+        self.setWindowIcon(QIcon('part1/PyQt/newssearch/news.png'))
         # 검색버튼 클릭시그널 / 슬롯함수
         self.btnSearch.clicked.connect(self.btnSearchClicked)
         # 텍스트박스에 검색어 입력 후 엔터 처리
