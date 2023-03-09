@@ -69,12 +69,26 @@ class qtApp(QWidget):
 
         for i,post in enumerate(items): #0,뉴스... / 1,뉴스... 형태
             title = self.replaceHtmlTab(post['title']) # HTMl 특수문자 변환
+            subtitle = post['subtitle']
+            title = f'{title} ({subtitle})'
             link = post['link']
             year = post['pubDate']
-            dir = post['director']
-            act = post['actor']
+            dir = post['director'].replace('|', ',')[:-1]
+            act = post['actor'].replace('|', ',')[:-1]
             score = post['userRating']
+            imgurl = post['image']
 
+            if imgurl != '':
+                data = urlopen(imgurl).read()
+                image = QImage()
+                image.loadFromData(data)
+
+                imgLabel = QLabel()
+                imgLabel.setPixmap(QPixmap(image))
+
+                f = open(f'part1\PyQt\image_{i+1}.png', mode= 'wb')
+                f.write(data)
+                f.close()
             
             # imgData = urlopen(post['image']).read()
             # image = QPixmap()
@@ -92,7 +106,12 @@ class qtApp(QWidget):
             self.tblResult.setItem(i,3,QTableWidgetItem(act))
             self.tblResult.setItem(i,4,QTableWidgetItem(score))
             self.tblResult.setItem(i,5,QTableWidgetItem(link))
-            # self.tblResult.setItem(i,6,imgLabel)
+            
+            if imgurl != '':
+                self.tblResult.setCellWidget(i,6,imgLabel)
+                self.tblResult.setRowHeight(i, 110)
+            else:
+                self.tblResult.setItem(i, 6, QTableWidgetItem('No poster!'))
 
     # HTMl 특수문자 변환하는 함수
     def replaceHtmlTab(self,sentence) -> str: #->str :함수 끝에서 str을 반환한다는뜻

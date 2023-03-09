@@ -9,6 +9,7 @@
     - PyQt5
     - Qt Designer
     - Naver OpenAPI
+    - Urllib 이미지 다운로드 기술 습득
 
 ## DB연동 GUI 프로그램
 

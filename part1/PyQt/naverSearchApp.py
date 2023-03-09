@@ -57,8 +57,9 @@ class qtApp(QWidget):
         self.tblResult.setColumnCount(2)
         self.tblResult.setRowCount(len(items)) #display값으로 설정하여 나온 결과값 100개 행 생성
         self.tblResult.setHorizontalHeaderLabels(['기사제목','뉴스링크']) #행 제목 변경
-        self.tblResult.setColumnWidth(0,310)
-        self.tblResult.setColumnWidth(1,260)
+        self.tblResult.setColumnWidth(0,150)
+        self.tblResult.setColumnWidth(1,70)
+        self.tblResult.setColumnWidth(4,50)
         self.tblResult.setEditTriggers(QAbstractItemView.NoEditTriggers) #컬럼데이터 수정금지
 
         for i,post in enumerate(items): #0,뉴스... / 1,뉴스... 형태
