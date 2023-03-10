@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>541</width>
-    <height>600</height>
+    <width>540</width>
+    <height>590</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>540</width>
+    <height>590</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>addressBook</string>
@@ -19,8 +25,8 @@
      <rect>
       <x>9</x>
       <y>9</y>
-      <width>521</width>
-      <height>171</height>
+      <width>557</width>
+      <height>637</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
