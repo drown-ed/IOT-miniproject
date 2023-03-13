@@ -7,7 +7,7 @@ import pymysql
 class qtApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('part1/PyQt/addressbook/personal.ui', self)
+        uic.loadUi('part1/PyQt/addressbook/addressBook.ui', self)
         self.setWindowIcon(QIcon('part1/PyQt/addressbook/address.png'))
 
         self.initDB()

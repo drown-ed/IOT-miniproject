@@ -12,5 +12,13 @@
     - Urllib 이미지 다운로드 기술 습득
 
 ## DB연동 GUI 프로그램
+- 주소록 앱 만들기
+    - Python 3.11.2
+    - MySQL 8.0 연동
+    - pymysql 모듈 사용
+    - PyQt5 / Qt Designer
+
+## 파이썬 관련 추가학습
+- QR 코드 생성 앱
 
 ## MiniProject 실습
