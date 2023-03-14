@@ -21,4 +21,10 @@
 ## 파이썬 관련 추가학습
 - QR 코드 생성 앱
 
+- TTS(Text To Speech)
+    - gtts 모듈
+    - playsound 모듈
+
+- 암호해제 프로그램
+
 ## MiniProject 실습
