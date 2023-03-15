@@ -11,8 +11,8 @@ from PyQt5.QtGui import *
 class qtApp(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi('part1/PyQt/newssearch/NaversearchUI.ui',self)
-        self.setWindowIcon(QIcon('part1/PyQt/newssearch/news.png'))
+        uic.loadUi('./PyQt_Practice/NaverApiSearch.ui',self)
+        self.setWindowIcon(QIcon('./PyQt_practice/newspaper.png'))
         # 검색버튼 클릭시그널 / 슬롯함수
         self.btnSearch.clicked.connect(self.btnSearchClicked)
         # 텍스트박스에 검색어 입력 후 엔터 처리
@@ -40,7 +40,6 @@ class qtApp(QWidget):
         else:
             api=NaverApi() # NaverApi 클래스 객체 생성
             node='news'
-            outputs=[] # 검색 후 결과를 담을 리스트 변수
             display=100 #검색결과 100개만 뽑아오겠다는 의미
 
             result=api.getNaverSearch(node,search,1,display)
@@ -57,9 +56,8 @@ class qtApp(QWidget):
         self.tblResult.setColumnCount(2)
         self.tblResult.setRowCount(len(items)) #display값으로 설정하여 나온 결과값 100개 행 생성
         self.tblResult.setHorizontalHeaderLabels(['기사제목','뉴스링크']) #행 제목 변경
-        self.tblResult.setColumnWidth(0,150)
-        self.tblResult.setColumnWidth(1,70)
-        self.tblResult.setColumnWidth(4,50)
+        self.tblResult.setColumnWidth(0,310)
+        self.tblResult.setColumnWidth(1,260)
         self.tblResult.setEditTriggers(QAbstractItemView.NoEditTriggers) #컬럼데이터 수정금지
 
         for i,post in enumerate(items): #0,뉴스... / 1,뉴스... 형태
