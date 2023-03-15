@@ -20,11 +20,17 @@
 
 ## 파이썬 관련 추가학습
 - QR 코드 생성 앱
+    - PyQt
 
 - TTS(Text To Speech)
     - gtts 모듈
     - playsound 모듈
 
 - 암호해제 프로그램
+    - itertools, zipfile 기본 모듈
+    - 무차별 대입공격 (BruthForce)
+
+- 스레드 사용법
+    - GUI와 처리 시간이 긴 로직을 실행하면 반드시 스레드 사용
 
 ## MiniProject 실습

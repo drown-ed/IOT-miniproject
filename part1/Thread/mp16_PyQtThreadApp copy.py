@@ -23,8 +23,8 @@ class BackgroundWorker(QThread): #PyQt5 스레드를 위한 클래스 존재
         #     self.parent.txbLog.append(f'스레드 출력 > {i}')
         while self.working:
             self.procChanged.emit(self.count) # self.count값을 호출한곳으로 내보냄(ex.procUpdated)
-            self.count+=1 # 값 증가 처리만 함
-            time.sleep(0.000000001)
+            self.count+=1 # 값 증가 처리만 함 / 업무 프로세스가 동작하는 위치
+            time.sleep(0.001)
 
 class qtApp(QWidget):
     def __init__(self):
@@ -38,7 +38,6 @@ class qtApp(QWidget):
         self.worker=BackgroundWorker(parent=self, count=0)
         # 백그라운드 worker의 시그널에 접근하여 처리하기 위한 슬롯 함수
         self.worker.procChanged.connect(self.procUpdated)
-
         self.pgbTask.setRange(0,1000000)
 
     @pyqtSlot(int)
@@ -51,6 +50,7 @@ class qtApp(QWidget):
     def btnStartClicked(self):
         self.worker.start()
         self.worker.working = True
+        self.worker.count = 0
 
 if __name__=='__main__':
     app=QApplication(sys.argv)
