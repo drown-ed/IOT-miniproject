@@ -23,6 +23,10 @@ class Dino:
 
     def run(self):
         self.image = self.run_img[self.step_index // 5]
+        self.dino_rect = self.image.get_rect()
+        self.dino_rect.x = self.X_Pos
+        self.dino_rect.y = self.Y_Pos
+        self.step_index += 1
 
     def duck(self):
         pass
