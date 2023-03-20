@@ -53,6 +53,4 @@
 - 게임 만들기 DinoRun
   - PyGame
 
-
-
 ## MiniProject 실습
