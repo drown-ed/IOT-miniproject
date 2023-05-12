@@ -21,7 +21,8 @@
                                         VerticalAlignment="Center"/>
             <Label Content="RealTime Monitoring" Style="{StaticResource MahApps.Styles.Label}"
                    FontSize="25" FontWeight="Bold" VerticalAlignment="Center" />
-            <Label x:Name="LblSensingDt" Content="2023-05-10 10:34:45" FontSize="14" VerticalAlignment="Center"/>
+            <Label x:Name="LblSensingDt" Content="2023-05-10 10:34:45" FontSize="14" 
+                   VerticalAlignment="Center" Margin="20,0" />
         </StackPanel>
 
         <Grid Grid.Row="1" Margin="10">
@@ -51,7 +52,7 @@
                    FontSize="16" FontWeight="Bold"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-            <Label Grid.Row="1" Grid.Column="0" Content="Temperature(℃)"
+            <Label Grid.Row="1" Grid.Column="0" Content="Temp(℃)"
                    FontSize="16" FontWeight="Bold"
                    VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Label.LayoutTransform>
@@ -115,9 +116,9 @@
 
                 <lvc:Gauge.GaugeActiveFill>
                     <LinearGradientBrush>
-                        <GradientStop Color="yellow" Offset="0.0" />
+                        <GradientStop Color="Aqua" Offset="0.0" />
                         <GradientStop Color="GreenYellow" Offset="0.5" />
-                        <GradientStop Color="Aquamarine" Offset="1.0" />
+                        <GradientStop Color="DarkOrange" Offset="1.0" />
                     </LinearGradientBrush>
                 </lvc:Gauge.GaugeActiveFill>
             </lvc:Gauge>
@@ -129,8 +130,7 @@
                 <lvc:AngularGauge.Sections>
                     <lvc:AngularSection FromValue="0" ToValue="40" Fill="Yellow" />
                     <lvc:AngularSection FromValue="40" ToValue="60" Fill="GreenYellow" />
-                    <lvc:AngularSection FromValue="60" ToValue="90" Fill="Aquamarine" />
-                    
+                    <lvc:AngularSection FromValue="60" ToValue="90" Fill="Aquamarine" />                    
                 </lvc:AngularGauge.Sections>
             </lvc:AngularGauge>
 
@@ -141,7 +141,6 @@
                     <lvc:AngularSection FromValue="0" ToValue="40" Fill="Yellow" />
                     <lvc:AngularSection FromValue="40" ToValue="60" Fill="GreenYellow" />
                     <lvc:AngularSection FromValue="60" ToValue="90" Fill="Aquamarine" />
-
                 </lvc:AngularGauge.Sections>
             </lvc:AngularGauge>
 
@@ -152,7 +151,6 @@
                     <lvc:AngularSection FromValue="0" ToValue="40" Fill="Yellow" />
                     <lvc:AngularSection FromValue="40" ToValue="60" Fill="GreenYellow" />
                     <lvc:AngularSection FromValue="60" ToValue="90" Fill="Aquamarine" />
-
                 </lvc:AngularGauge.Sections>
             </lvc:AngularGauge>
 
@@ -163,7 +161,6 @@
                     <lvc:AngularSection FromValue="0" ToValue="40" Fill="Yellow" />
                     <lvc:AngularSection FromValue="40" ToValue="60" Fill="GreenYellow" />
                     <lvc:AngularSection FromValue="60" ToValue="90" Fill="Aquamarine" />
-
                 </lvc:AngularGauge.Sections>
             </lvc:AngularGauge>
         </Grid>
