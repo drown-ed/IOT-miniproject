@@ -14,6 +14,8 @@
 
 - SmartHome 시스템 문제점
 	- 실행 후 로그 텍스트박스 내용 많아 UI제어가 느려짐 - 해결!
+	- LiveCharts는 대용량 데이터 차트 무리 (LiveChart v.2 동일)
+	- 대용량 데이터 차트는 OxyChart 사용
 
 
 	
